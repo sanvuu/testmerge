@@ -25,7 +25,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build jar
-        run: mvn clean package
+        run: mvn -f ./java/pom.xml clean package
 
       - name: Upload Artifact
         uses: actions/upload-artifact@master
