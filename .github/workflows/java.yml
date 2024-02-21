@@ -52,7 +52,7 @@ jobs:
         run: docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
 
       - name: Docker Build
-        run: docker build -f ./java/Dockerfile -t ${DOCKER_USERNAME}/testmerge/java:${IMAGE_TAG}
+        run: docker build -t ${DOCKER_USERNAME}/testmerge:${IMAGE_TAG} ./java/
 
       - name: docker push
-        run: docker push ${DOCKER_USERNAME}/testmerge/java:${IMAGE_TAG}
+        run: docker push ${DOCKER_USERNAME}/testmerge:${IMAGE_TAG}
