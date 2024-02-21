@@ -1,4 +1,4 @@
 FROM golang:1.20
 
-COPY ./go/main .
+COPY ./main .
 CMD ["./go/main"]
