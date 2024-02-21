@@ -22,7 +22,7 @@ jobs:
       run: docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
 
     - name: Docker Build
-      run: docker build --file Dockerfile -t ${DOCKER_USERNAME}/testmerge:${IMAGE_TAG} ./py/
+      run: docker build -t ${DOCKER_USERNAME}/testmerge:${IMAGE_TAG} ./py/
 
     - name: docker push
       run: docker push ${DOCKER_USERNAME}/testmerge:${IMAGE_TAG}
