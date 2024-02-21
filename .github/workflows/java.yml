@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: artifact-java
-          path: ./*.jar
+          path: ./target/*.jar
 
   build_push_image:
     needs: build_artifact
